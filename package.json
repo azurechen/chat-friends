@@ -1,0 +1,57 @@
+{
+  "name": "",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "web",
+      "functions"
+    ]
+  },
+  "scripts": {
+    "deploy": "yarn firebase deploy",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write --parser typescript",
+      "git add",
+      "eslint --cache",
+      "yarn test --bail --findRelatedTests --passWithNoTests"
+    ]
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.4.2",
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "8.20.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "12.2.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "firebase-tools": "11.4.0",
+    "husky": "^4.3.8",
+    "jest": "^28.1.3",
+    "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.0.5",
+    "ts-jest": "^28.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "4.7.4"
+  }
+}
