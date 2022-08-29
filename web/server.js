@@ -11,6 +11,7 @@ const server = next({
 const nextjsHandler = server.getRequestHandler();
 exports.nextServer = functions
   .runWith({
+    invoker: 'public',
     minInstances: 5,
   })
   .https.onRequest((req, res) => {
