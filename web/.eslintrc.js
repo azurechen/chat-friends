@@ -24,5 +24,6 @@ module.exports = {
     'react/display-name': 'off',
     'jsx-a11y/media-has-caption': 0,
     '@next/next/no-img-element': 'off',
+    '@typescript-eslint/indent': 'off',
   },
 };

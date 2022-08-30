@@ -18,5 +18,6 @@ module.exports = {
   rules: {
     'no-console': [1, { allow: ['warn', 'error'] }],
     'object-curly-newline': 0,
+    '@typescript-eslint/indent': 'off',
   },
 };
